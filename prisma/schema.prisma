@@ -20,6 +20,7 @@ model User {
   venues       Venue[]   @relation("VenueOwner")
   wallet       Wallet?
   sessions     Session[]
+  transactions Transaction[]
 }
 
 model Role {
@@ -83,3 +84,4 @@ model Session {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
